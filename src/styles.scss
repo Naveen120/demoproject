@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// @use '../node_modules/@angular/material/theming' as mat;
+@include mat-core();
+
+$my-primary: mat-palette($mat-indigo, A500);
+$my-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-theme: mat-light-theme($my-primary,$my-accent);
+
+
+
+
+
+// @mixin my-button-color($config-or-theme){
+//     $config: mat-get-color-config(config-or-theme);
+//     $primary: map-get($config, "primary");
+//     $accent: map-get($config, "accent");
+//     .my-button{
+//         background-color: mat-color($config);
+//         border-color:mat-color($config, A400);
+//     }
+// }
+
+@include angular-material-theme($my-theme);
+// @include my-button-color($my-theme);
+
+
+

@@ -1,0 +1,22 @@
+$button-height: 30px;
+$mdc-button-disabled-ink-color: rgb(223, 223, 223);
+
+@mixin button-base() {
+    background-color: yellow;
+    display: inline-block;
+    position: relative;
+    height:$button-height;
+    border:none;
+    vertical-align: middle;
+
+    &:hover{ cursor: pointer;}
+    &:disabled{
+        color: $mdc-button-disabled-ink-color;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+.btn{
+    @include button-base();
+}
